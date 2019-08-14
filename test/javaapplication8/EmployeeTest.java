@@ -56,7 +56,7 @@ public class EmployeeTest {
     
         @Test
     public void testSalario0Supervisor() {
-       /*CASO DE QUE UN SALARIO sea 0 pero el employe sea supervisor y la currency*/
+       /*CASO DE QUE UN SALARIO sea 0 pero el employe sea supervisor y la currency sea diferente de usd*/
        Employee e = new Employee(0,"EU",1,EmployeeType.Supervisor);
        assertNotEquals(386.0F, e.CalculateYearBonus(),1);
        
@@ -80,7 +80,7 @@ public class EmployeeTest {
     
     @Test
     public void testSalario0Manager() {
-       /*CASO DE QUE UN SALARIO sea 0 pero el employe sea manager y la currency*/
+       /*CASO DE QUE UN SALARIO sea 0 pero el employe sea manager y la currency sea diferente a usd*/
        Employee e = new Employee(0,"EU",1,EmployeeType.Manager);
        assertEquals(386.0F, e.CalculateYearBonus(),1);
        
